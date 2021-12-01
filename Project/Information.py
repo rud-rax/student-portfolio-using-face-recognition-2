@@ -26,7 +26,7 @@ database_name = "STUDENT_PORTFOLIO_DATABASE"
 class FaceRecognition:
     def __init__(self, path):
 
-        self.path = r"Project/ImageInfo"
+        self.path = path
         self.images = []
         self.classNames = []
 
