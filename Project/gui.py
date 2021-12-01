@@ -1,7 +1,7 @@
 import mysql.connector as myc
 from tkinter import *
 import dbConnection as dbc
-import Information as inf
+import main as mn
 
 
 root = Tk()
@@ -87,7 +87,7 @@ def facerecognition():
     e7.delete(0, END)
     e8.delete(0, END)
 
-    fr = inf.FaceRecognition(path=r"Project/ImageInfo")
+    fr = mn.FaceRecognition(path=r"Project/ImageInfo")
     fr.extractClassNames()
     encodeList = fr.findEncodings()
     print("Encoding Complete")
