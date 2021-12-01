@@ -51,7 +51,7 @@ def getuser():
 
     lhost = "localhost"
     luser = "root"
-    lpasswd = "rudu101519"
+    lpasswd = ""
 
     # database name can be changed below the import statements
 

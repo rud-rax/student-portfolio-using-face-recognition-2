@@ -59,7 +59,7 @@ class FaceRecognition:
         # YOU NEED TO UNINSTALL mqsql.connector OR ELSE YOU WILL GET AN ERROR
         lhost = "localhost"
         luser = "root"
-        lpasswd = "rudu101519"
+        lpasswd = ""
 
         student_db_connection = myc.connect(
             host=lhost,

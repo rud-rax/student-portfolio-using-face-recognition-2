@@ -240,7 +240,7 @@ if __name__ == "__main__":
     # make sure to change the below values based on your MySQL authentication details
     lhost = "localhost"
     luser = "root"
-    lpasswd = "rudu101519"
+    lpasswd = ""
 
     # database name can be changed below the import statements
 
