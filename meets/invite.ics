@@ -1,0 +1,130 @@
+BEGIN:VCALENDAR
+METHOD:REQUEST
+PRODID:Microsoft Exchange Server 2010
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID:India Standard Time
+BEGIN:STANDARD
+DTSTART:16010101T000000
+TZOFFSETFROM:+0530
+TZOFFSETTO:+0530
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:16010101T000000
+TZOFFSETFROM:+0530
+TZOFFSETTO:+0530
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+ORGANIZER;CN="Sultana, Nousheen":mailto:nousheen.sultana@sap.com
+ATTENDEE;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE;CN=rudrakshna
+ ik8990@gmail.com:mailto:rudrakshnaik8990@gmail.com
+ATTENDEE;ROLE=OPT-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE;CN=SAP Semico
+ lon Hackathon:mailto:semicolon@sap.com
+ATTACH:CID:image001.wmz@01D7E146.356F35C0
+ATTACH:CID:image002.png@01D7E146.356F35C0
+ATTACH:CID:image003.png@01D7E146.356F35C0
+ATTACH:CID:image004.jpg@01D7E146.356F35C0
+ATTACH:CID:image005.wmz@01D7E146.35AEFDE0
+ATTACH:CID:image006.png@01D7E146.35AEFDE0
+ATTACH:CID:image007.png@01D7E146.35AEFDE0
+ATTACH:CID:image008.jpg@01D7E146.35AEFDE0
+ATTACH:CID:image001.png@01D7E146.35C98AC0
+ATTACH:CID:image002.png@01D7E146.35C98AC0
+ATTACH:CID:image003.jpg@01D7E146.35C98AC0
+DESCRIPTION;LANGUAGE=en-US:\n[https://media-fastly.hackerearth.com/media/ha
+ ckathon/sap-semi-colon-hackathon-50/images/6decab7610-sap_cover2x_2.png]<h
+ ttp://email.hackerearth.com/ls/click?upn=CJ5lmw0bx9xKfGkLEKSpWalTFeucITgjQ
+ 0WP3GTyvf-2BkkwBsXC3pez7Qag1RocbtxlK119Ggi-2BurVM962amZObC01hCehanNOJrNDY1
+ uFR7NgJ8XFKZ1m0oIuMvnyzjRwn2uKMpN6u5waUuzKaWArj6qrzEcocp-2B75R0hwWip92luOv
+ AwocBrUglZzd1TNdnPMNUqgSasHSzH80ZiWBDWg-3D-3DgGzQ_HgS2h8KFpKrfbBnB2gpiM4ZZ
+ hgdxc3poLIRhYRxhOLRkuHyVT8BUCd94SYkzt4wDDLtvvHGn9itvZD6hxkRgkqabkkMgWfEtMB
+ TVCjEVc-2Bx5-2BioW7aSPzu0WnXXs4X4xCerPT52U-2BGGbJyd7n10EDYy9WcQAq5QeAdthjR
+ tjy69WN4UKgKV7sAqCAFypTOcmgSdr6vT97evppcGFg-2FcGiY37rkrfjgsU9xGn78jIJ5IVbk
+ WxHaUfH0YdzuKJdJmnhhcLgEJDpKavvGuu7LdLRe3e46J8AsaJXUQFyVCROdI-3D>\nDear Pa
+ rticipants\,\n\nHearty congratulations on making it to the next phase of S
+ emicolon\; Hackathon.\n\nAs we move ahead\, things are going to get even m
+ ore exciting as you all plan and execute your ideas during the prototype p
+ hase. It’s time to meet your mentor from Semicolon\; Hackathon organizin
+ g committee from SAP. Utilise the occasion to interact with the Mentor and
+  grab the opportunity to get guidance for your upcoming phases.\n\n[Detail
+ s of the meet:  Date: 26th Nov  Time: 11:00 a.m.][cid:image002.png@01D7E14
+ 6.35C98AC0]\n\nReach out to us for any queries via this email (semicolon@s
+ ap.com).\n\nRegards\,\nTeam Semicolon\; 5.0\nScholar@SAP\n\n\n\n\n\n\n\n\n
+ [cid:image003.jpg@01D7E146.35C98AC0]\n\n\n\n\n\n\n\n\n\n__________________
+ ______________\n\nCopyright/Trademark  |   Privacy  |   Impressum\n\nSAP S
+ E\, Dietmar-Hopp-Allee 16\, 69190 Walldorf\, Germany\n\nPflichtangaben/Man
+ datory Disclosure Statements: http://www.sap.com/about/legal/impressum.htm
+ l\n\nDiese E-Mail kann Betriebs- oder Geschäftsgeheimnisse oder sonstige 
+ vertrauliche Informationen enthalten. Sollten Sie diese E-Mail irrtümlich
+  erhalten haben\, ist Ihnen eine Kenntnisnahme des Inhalts\, eine Vervielf
+ ältigung oder Weitergabe der E-Mail ausdrücklich untersagt. Bitte benach
+ richtigen Sie uns und vernichten Sie die empfangene E-Mail. Vielen Dank.\n
+ \nThis e-mail may contain trade secrets or privileged\, undisclosed\, or o
+ therwise confidential information. If you have received this e-mail in err
+ or\, you are hereby notified that any review\, copying\, or distribution o
+ f it is strictly prohibited. Please inform us immediately and destroy the 
+ original transmittal. Thank you for your cooperation.\n\n\n\n\n\n\n\n\n\n\
+ n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n_____________________________________
+ ___________________________________________\nMicrosoft Teams meeting\nJoin
+  on your computer or mobile app\nClick here to join the meeting<https://te
+ ams.microsoft.com/l/meetup-join/19%3ameeting_YTlkMDE5ODMtZTA5Ni00OTMwLWE5Y
+ jctYzBmNGQ5ZWEwYjgx%40thread.v2/0?context=%7b%22Tid%22%3a%2242f7676c-f455-
+ 423c-82f6-dc2d99791af7%22%2c%22Oid%22%3a%2254bf607a-60a4-4611-8e84-c6461b4
+ 0a067%22%7d>\nOr call in (audio only)\n+91 22 6001 6116\,\,\,\,537792473#<
+ tel:+912260016116\,\,\,\,537792473#>   India\, Mumbai\n0008000403425\,\,\,
+ \,537792473#<tel:0008000403425\,\,\,\,537792473#>   India (Toll-free)\nPho
+ ne Conference ID: 537 792 473#\nFind a local number<https://dialin.teams.m
+ icrosoft.com/ba7776e4-2950-4228-b59a-955336b936d0?id=537792473> | Reset PI
+ N<https://mysettings.lync.com/pstnconferencing>\nLearn More<https://aka.ms
+ /JoinTeamsMeeting> | Meeting options<https://teams.microsoft.com/meetingOp
+ tions/?organizerId=54bf607a-60a4-4611-8e84-c6461b40a067&tenantId=42f7676c-
+ f455-423c-82f6-dc2d99791af7&threadId=19_meeting_YTlkMDE5ODMtZTA5Ni00OTMwLW
+ E5YjctYzBmNGQ5ZWEwYjgx@thread.v2&messageId=0&language=en-US>\n____________
+ ____________________________________________________________________\n\n
+UID:040000008200E00074C5B7101A82E00800000000502C3EA445E1D701000000000000000
+ 010000000559BABC77B24494F9A16EE7BF4559638
+SUMMARY;LANGUAGE=en-US:Meet your Mentor | Semicolon\; Hackathon 5.0
+DTSTART;TZID=India Standard Time:20211126T110000
+DTEND;TZID=India Standard Time:20211126T112500
+CLASS:PUBLIC
+PRIORITY:5
+DTSTAMP:20211124T094608Z
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+SEQUENCE:0
+LOCATION;LANGUAGE=en-US:Microsoft Teams Meeting
+X-MICROSOFT-CDO-APPT-SEQUENCE:0
+X-MICROSOFT-CDO-OWNERAPPTID:647542757
+X-MICROSOFT-CDO-BUSYSTATUS:TENTATIVE
+X-MICROSOFT-CDO-INTENDEDSTATUS:BUSY
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-CDO-IMPORTANCE:1
+X-MICROSOFT-CDO-INSTTYPE:0
+X-MICROSOFT-SKYPETEAMSMEETINGURL:https://teams.microsoft.com/l/meetup-join/
+ 19%3ameeting_YTlkMDE5ODMtZTA5Ni00OTMwLWE5YjctYzBmNGQ5ZWEwYjgx%40thread.v2/
+ 0?context=%7b%22Tid%22%3a%2242f7676c-f455-423c-82f6-dc2d99791af7%22%2c%22O
+ id%22%3a%2254bf607a-60a4-4611-8e84-c6461b40a067%22%7d
+X-MICROSOFT-SCHEDULINGSERVICEUPDATEURL:https://api.scheduler.teams.microsof
+ t.com/teams/42f7676c-f455-423c-82f6-dc2d99791af7/54bf607a-60a4-4611-8e84-c
+ 6461b40a067/19_meeting_YTlkMDE5ODMtZTA5Ni00OTMwLWE5YjctYzBmNGQ5ZWEwYjgx@th
+ read.v2/0
+X-MICROSOFT-SKYPETEAMSPROPERTIES:{"cid":"19:meeting_YTlkMDE5ODMtZTA5Ni00OTM
+ wLWE5YjctYzBmNGQ5ZWEwYjgx@thread.v2"\,"private":true\,"type":0\,"mid":0\,"
+ rid":0\,"uid":null}
+X-MICROSOFT-ONLINEMEETINGCONFLINK:conf:sip:nousheen.sultana@sap.com\;gruu\;
+ opaque=app:conf:focus:id:teams:2:0!19:meeting_YTlkMDE5ODMtZTA5Ni00OTMwLWE5
+ YjctYzBmNGQ5ZWEwYjgx-thread.v2!54bf607a60a446118e84c6461b40a067!42f7676cf4
+ 55423c82f6dc2d99791af7
+X-MICROSOFT-DONOTFORWARDMEETING:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+X-MICROSOFT-LOCATIONS:[ { "DisplayName" : "Microsoft Teams Meeting"\, "Loca
+ tionAnnotation" : ""\, "LocationSource" : 0\, "Unresolved" : false\, "Loca
+ tionUri" : "" } ]
+BEGIN:VALARM
+DESCRIPTION:REMINDER
+TRIGGER;RELATED=START:-PT15M
+ACTION:DISPLAY
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,763 @@
+# Part 1
+import cv2
+import numpy as np
+import face_recognition
+
+imgElon = face_recognition.load_image_file('ImagesBasic/Elon Musk.jpg')
+imgElon = cv2.cvtColor(imgElon,cv2.COLOR_BGR2RGB)
+imgTest = face_recognition.load_image_file('ImagesBasic/Elon Test.jpg')
+imgTest = cv2.cvtColor(imgTest,cv2.COLOR_BGR2RGB)
+
+cv2.imshow('Elon Musk',imgElon)
+cv2.imshow('Elon Test',imgTest)
+cv2.waitKey(0)
+// 2 imgs of elon test and musk displayed
+
+
+##part 2
+import cv2
+import numpy as np
+import face_recognition
+
+imgElon = face_recognition.load_image_file('ImagesBasic/Elon Musk.jpg')
+imgElon = cv2.cvtColor(imgElon,cv2.COLOR_BGR2RGB)
+imgTest = face_recognition.load_image_file('ImagesBasic/Elon Test.jpg')
+imgTest = cv2.cvtColor(imgTest,cv2.COLOR_BGR2RGB)
+
+faceLoc = face_recognition.face_locations(imgElon)[0]
+encodeElon = face_recognition.face_encodings(imgElon)[0]
+#cv2.rectangle(imgElon,(fac))
+print(faceLoc)
+
+
+cv2.imshow('Elon Musk',imgElon)
+cv2.imshow('Elon Test',imgTest)
+cv2.waitKey(0)
+
+op..>>(1047, 1668, 1845, 869)
+
+##part 3
+import cv2
+import numpy as np
+import face_recognition
+
+imgElon = face_recognition.load_image_file('ImagesBasic/Elon Musk.jpg')
+imgElon = cv2.cvtColor(imgElon,cv2.COLOR_BGR2RGB)
+imgTest = face_recognition.load_image_file('ImagesBasic/Elon Test.jpg')
+imgTest = cv2.cvtColor(imgTest,cv2.COLOR_BGR2RGB)
+
+faceLoc = face_recognition.face_locations(imgElon)[0]
+encodeElon = face_recognition.face_encodings(imgElon)[0]
+cv2.rectangle(imgElon,(faceLoc[3],faceLoc[0]),(faceLoc[1],faceLoc[2]),(255,0,255),2)
+
+
+faceLocTest = face_recognition.face_locations(imgTest)[0]
+encodeTest = face_recognition.face_encodings(imgTest)[0]
+cv2.rectangle(imgTest,(faceLoc[3],faceLoc[0]),(faceLoc[1],faceLoc[2]),(255,0,255),2)
+
+
+cv2.imshow('Elon Musk',imgElon)
+cv2.imshow('Elon Test',imgTest)
+cv2.waitKey(0)
+
+op>>> purple box on face
+
+#part 4 op should be true
+import cv2
+import numpy as np
+import face_recognition
+
+imgElon = face_recognition.load_image_file('ImagesBasic/Elon Musk.jpg')
+imgElon = cv2.cvtColor(imgElon,cv2.COLOR_BGR2RGB)
+imgTest = face_recognition.load_image_file('ImagesBasic/Elon Test.jpg')
+imgTest = cv2.cvtColor(imgTest,cv2.COLOR_BGR2RGB)
+
+faceLoc = face_recognition.face_locations(imgElon)[0]
+encodeElon = face_recognition.face_encodings(imgElon)[0]
+cv2.rectangle(imgElon,(faceLoc[3],faceLoc[0]),(faceLoc[1],faceLoc[2]),(255,0,255),2)
+
+
+faceLocTest = face_recognition.face_locations(imgTest)[0]
+encodeTest = face_recognition.face_encodings(imgTest)[0]
+cv2.rectangle(imgTest,(faceLoc[3],faceLoc[0]),(faceLoc[1],faceLoc[2]),(255,0,255),2)
+
+results = face_recognition.compare_faces([encodeElon],encodeTest)
+print(results)
+
+cv2.imshow('Elon Musk',imgElon)
+cv2.imshow('Elon Test',imgTest)
+cv2.waitKey(0)
+
+
+# part 5 try with a difffent image 
+op should be false
+import cv2
+import numpy as np
+import face_recognition
+
+imgElon = face_recognition.load_image_file('ImagesBasic/Elon Musk.jpg')
+imgElon = cv2.cvtColor(imgElon,cv2.COLOR_BGR2RGB)
+imgTest = face_recognition.load_image_file('ImagesBasic/Bill Gates.jpg')
+imgTest = cv2.cvtColor(imgTest,cv2.COLOR_BGR2RGB)
+
+faceLoc = face_recognition.face_locations(imgElon)[0]
+encodeElon = face_recognition.face_encodings(imgElon)[0]
+cv2.rectangle(imgElon,(faceLoc[3],faceLoc[0]),(faceLoc[1],faceLoc[2]),(255,0,255),2)
+
+
+faceLocTest = face_recognition.face_locations(imgTest)[0]
+encodeTest = face_recognition.face_encodings(imgTest)[0]
+cv2.rectangle(imgTest,(faceLoc[3],faceLoc[0]),(faceLoc[1],faceLoc[2]),(255,0,255),2)
+
+results = face_recognition.compare_faces([encodeElon],encodeTest)
+print(results)
+
+cv2.imshow('Elon Musk',imgElon)
+cv2.imshow('Elon Test',imgTest)
+cv2.waitKey(0)
+
+#part 6 
+so many images hence chances of similarity is possible 
+hence we use distance as a parameter to know how same it is
+import cv2
+import numpy as np
+import face_recognition
+
+imgElon = face_recognition.load_image_file('ImagesBasic/Elon Musk.jpg')
+imgElon = cv2.cvtColor(imgElon,cv2.COLOR_BGR2RGB)
+imgTest = face_recognition.load_image_file('ImagesBasic/Elon Test.jpg')
+imgTest = cv2.cvtColor(imgTest,cv2.COLOR_BGR2RGB)
+
+faceLoc = face_recognition.face_locations(imgElon)[0]
+encodeElon = face_recognition.face_encodings(imgElon)[0]
+cv2.rectangle(imgElon,(faceLoc[3],faceLoc[0]),(faceLoc[1],faceLoc[2]),(255,0,255),2)
+
+
+faceLocTest = face_recognition.face_locations(imgTest)[0]
+encodeTest = face_recognition.face_encodings(imgTest)[0]
+cv2.rectangle(imgTest,(faceLoc[3],faceLoc[0]),(faceLoc[1],faceLoc[2]),(255,0,255),2)
+
+results = face_recognition.compare_faces([encodeElon],encodeTest)
+facedistance = face_recognition.face_distance([encodeElon],encodeTest)
+print(results,facedistance)
+
+cv2.imshow('Elon Musk',imgElon)
+cv2.imshow('Elon Test',imgTest)
+cv2.waitKey(0)
+
+
+# part 7 
+print on pic 
+import cv2
+import numpy as np
+import face_recognition
+
+imgElon = face_recognition.load_image_file('ImagesBasic/Elon Musk.jpg')
+imgElon = cv2.cvtColor(imgElon,cv2.COLOR_BGR2RGB)
+imgTest = face_recognition.load_image_file('ImagesBasic/Elon Test.jpg')
+imgTest = cv2.cvtColor(imgTest,cv2.COLOR_BGR2RGB)
+
+faceLoc = face_recognition.face_locations(imgElon)[0]
+encodeElon = face_recognition.face_encodings(imgElon)[0]
+cv2.rectangle(imgElon,(faceLoc[3],faceLoc[0]),(faceLoc[1],faceLoc[2]),(255,0,255),2)
+
+
+faceLocTest = face_recognition.face_locations(imgTest)[0]
+encodeTest = face_recognition.face_encodings(imgTest)[0]
+cv2.rectangle(imgTest,(faceLoc[3],faceLoc[0]),(faceLoc[1],faceLoc[2]),(255,0,255),2)
+
+results = face_recognition.compare_faces([encodeElon],encodeTest)
+facedistance = face_recognition.face_distance([encodeElon],encodeTest)
+print(results,facedistance)
+cv2.putText(imgTest,f'{results}{round(facedistance[0],2)}',(50,50),cv2.FONT_HERSHEY_COMPLEX,1,(0,0,255),2)
+
+cv2.imshow('Elon Musk',imgElon)
+cv2.imshow('Elon Test',imgTest)
+cv2.waitKey(0)
+
+#part 8 of this main py
+here i finally use my actuall face and it works with and with out make up
+PS: it also worked with a baby/childhood picture of mine either it working or just lying 
+import cv2
+import numpy as np
+import face_recognition
+
+imgElon = face_recognition.load_image_file('ImagesBasic/me.jpg')
+imgElon = cv2.cvtColor(imgElon,cv2.COLOR_BGR2RGB)
+imgTest = face_recognition.load_image_file('ImagesBasic/meyest.jpg')
+imgTest = cv2.cvtColor(imgTest,cv2.COLOR_BGR2RGB)
+
+faceLoc = face_recognition.face_locations(imgElon)[0]
+encodeElon = face_recognition.face_encodings(imgElon)[0]
+cv2.rectangle(imgElon,(faceLoc[3],faceLoc[0]),(faceLoc[1],faceLoc[2]),(255,0,255),2)
+
+
+faceLocTest = face_recognition.face_locations(imgTest)[0]
+encodeTest = face_recognition.face_encodings(imgTest)[0]
+cv2.rectangle(imgTest,(faceLoc[3],faceLoc[0]),(faceLoc[1],faceLoc[2]),(255,0,255),2)
+
+results = face_recognition.compare_faces([encodeElon],encodeTest)
+facedistance = face_recognition.face_distance([encodeElon],encodeTest)
+print(results,facedistance)
+cv2.putText(imgTest,f'{results}{round(facedistance[0],2)}',(50,50),cv2.FONT_HERSHEY_COMPLEX,1,(0,0,255),2)
+
+cv2.imshow('Elon Musk',imgElon)
+cv2.imshow('Elon Test',imgTest)
+cv2.waitKey(0)
+
+
+################################################################
+
+new py file INFORMATIONEN
+part 1
+import cv2
+import numpy as np
+import face_recognition
+import os
+
+path = 'ImageAttandance'
+images = []
+classNames = []
+myList = os.listdir(path)
+print(myList)
+
+
+imgElon = face_recognition.load_image_file('ImagesBasic/me.jpg')
+imgElon = cv2.cvtColor(imgElon,cv2.COLOR_BGR2RGB)
+imgTest = face_recognition.load_image_file('ImagesBasic/Bill Gates.jpg')
+imgTest = cv2.cvtColor(imgTest,cv2.COLOR_BGR2RGB)
+
+
+#part 2
+import cv2
+import numpy as np
+import face_recognition
+import os
+
+path = 'ImageAttandance'
+images = []
+classNames = []
+myList = os.listdir(path)
+print(myList)
+for cls in myList:
+    curImage = cv2.imread(f'{path}/{cls}')
+    images.append(curImage)
+    classNames.append(os.path.splitext(cls)[0])
+print(classNames)
+
+# imgElon = face_recognition.load_image_file('ImagesBasic/me.jpg')
+#imgElon = cv2.cvtColor(imgElon,cv2.COLOR_BGR2RGB)
+#imgTest = face_recognition.load_image_file('ImagesBasic/Bill Gates.jpg')
+#imgTest = cv2.cvtColor(imgTest,cv2.COLOR_BGR2RGB)
+
+#Now to add new face we re direct it ti attandance folder and get no. pic in it
+
+
+
+#part 3 
+
+
+import cv2
+import numpy as np
+import face_recognition
+import os
+
+path = 'ImageAttandance'
+images = []
+classNames = []
+myList = os.listdir(path)
+print(myList)
+for cls in myList:
+    curImage = cv2.imread(f'{path}/{cls}')
+    images.append(curImage)
+    classNames.append(os.path.splitext(cls)[0])
+print(classNames)
+
+#create fn to find encoding
+def findEncodings(images):
+    encodeList = []
+    for img in images:
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+        encode = face_recognition.face_encodings(img)[0]
+        encodeList.append(encode)
+    return encodeList
+
+encodeListKnown = findEncodings(images)
+print(len(encodeListKnown))
+#faceLoc = face_recognition.face_locations(imgElon)[0]
+#encodeElon = face_recognition.face_encodings(imgElon)[0]
+#cv2.rectangle(imgElon,(faceLoc[3],faceLoc[0]),(faceLoc[1],faceLoc[2]),(255,0,255),2)
+#
+#faceLocTest = face_recognition.face_locations(imgTest)[0]
+#encodeTest = face_recognition.face_encodings(imgTest)[0]
+#cv2.rectangle(imgTest,(faceLoc[3],faceLoc[0]),(faceLoc[1],faceLoc[2]),(255,0,255),2)
+#
+#results = face_recognition.compare_faces([encodeElon],encodeTest)
+#facedistance = face_recognition.face_distance([encodeElon],encodeTest)
+
+# imgElon = face_recognition.load_image_file('ImagesBasic/me.jpg')
+#imgElon = cv2.cvtColor(imgElon,cv2.COLOR_BGR2RGB)
+#imgTest = face_recognition.load_image_file('ImagesBasic/Bill Gates.jpg')
+#imgTest = cv2.cvtColor(imgTest,cv2.COLOR_BGR2RGB)
+
+#Now to add new face we re direct it ti attandance folder and get no. pic in it
+
+
+op:['Bill Gates.jpg', 'Elon Musk.jpg', 'Jack Ma.jpg', 'me.jpg']
+['Bill Gates', 'Elon Musk', 'Jack Ma', 'me']
+4
+
+Process finished with exit code 0
+
+
+#part 4
+After encoding dont redo it
+
+import cv2
+import numpy as np
+import face_recognition
+import os
+
+path = 'ImageAttandance'
+images = []
+classNames = []
+myList = os.listdir(path)
+print(myList)
+for cls in myList:
+    curImage = cv2.imread(f'{path}/{cls}')
+    images.append(curImage)
+    classNames.append(os.path.splitext(cls)[0])
+print(classNames)
+
+#create fn to find encoding
+def findEncodings(images):
+    encodeList = []
+    for img in images:
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+        encode = face_recognition.face_encodings(img)[0]
+        encodeList.append(encode)
+    return encodeList
+
+encodeListKnown = findEncodings(images)
+print('Encoding Complete')
+#faceLoc = face_recognition.face_locations(imgElon)[0]
+#encodeElon = face_recognition.face_encodings(imgElon)[0]
+#cv2.rectangle(imgElon,(faceLoc[3],faceLoc[0]),(faceLoc[1],faceLoc[2]),(255,0,255),2)
+#
+#faceLocTest = face_recognition.face_locations(imgTest)[0]
+#encodeTest = face_recognition.face_encodings(imgTest)[0]
+#cv2.rectangle(imgTest,(faceLoc[3],faceLoc[0]),(faceLoc[1],faceLoc[2]),(255,0,255),2)
+#
+#results = face_recognition.compare_faces([encodeElon],encodeTest)
+#facedistance = face_recognition.face_distance([encodeElon],encodeTest)
+
+# imgElon = face_recognition.load_image_file('ImagesBasic/me.jpg')
+#imgElon = cv2.cvtColor(imgElon,cv2.COLOR_BGR2RGB)
+#imgTest = face_recognition.load_image_file('ImagesBasic/Bill Gates.jpg')
+#imgTest = cv2.cvtColor(imgTest,cv2.COLOR_BGR2RGB)
+
+#Now to add new face we re direct it ti attandance folder and get no. pic in it
+
+# part 5 
+final run of recognotipn with name
+import cv2
+import cv2.cv2
+import numpy as np
+import face_recognition
+import os
+
+path = 'ImageAttandance'
+images = []
+classNames = []
+myList = os.listdir(path)
+print(myList)
+for cls in myList:
+    curImage = cv2.imread(f'{path}/{cls}')
+    images.append(curImage)
+    classNames.append(os.path.splitext(cls)[0])
+print(classNames)
+
+#create fn to find encoding
+def findEncodings(images):
+    encodeList = []
+    for img in images:
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+        encode = face_recognition.face_encodings(img)[0]
+        encodeList.append(encode)
+    return encodeList
+
+encodeListKnown = findEncodings(images)
+print('Encoding Complete')
+# Initial webcam to get new images to match from web cam
+cap = cv2.VideoCapture(0)
+while True:
+    success,img = cap.read()
+    #images to be kept small ,fast process
+    imgs = cv2.resize(img,(0,0),None,0.25,0.25)
+    imgs = cv2.cvtColor(imgs,cv2.COLOR_BGR2RGB)
+
+#encoding with current frame
+    facesCurFrame = face_recognition.face_locations(imgs)
+    encodeCurFrame = face_recognition.face_encodings(imgs,facesCurFrame)
+
+    #comapre face wrt encode
+
+    for encodeFace,faceLoc in zip(encodeCurFrame,facesCurFrame):
+        matches = face_recognition.compare_faces(encodeListKnown,encodeFace)
+        faceDis = face_recognition.face_distance(encodeListKnown,encodeFace)
+        print(faceDis)
+        matchIndex = np.argmin(faceDis)
+
+        if matches[matchIndex]:
+            name = classNames[matchIndex].upper()
+            print(name)
+    cv2.imshow('Webcam',img)
+    cv2.waitKey(1)
+
+
+#faceLoc = face_recognition.face_locations(imgElon)[0]
+#encodeElon = face_recognition.face_encodings(imgElon)[0]
+#cv2.rectangle(imgElon,(faceLoc[3],faceLoc[0]),(faceLoc[1],faceLoc[2]),(255,0,255),2)
+#
+#faceLocTest = face_recognition.face_locations(imgTest)[0]
+#encodeTest = face_recognition.face_encodings(imgTest)[0]
+#cv2.rectangle(imgTest,(faceLoc[3],faceLoc[0]),(faceLoc[1],faceLoc[2]),(255,0,255),2)
+#
+#results = face_recognition.compare_faces([encodeElon],encodeTest)
+#facedistance = face_recognition.face_distance([encodeElon],encodeTest)
+
+# imgElon = face_recognition.load_image_file('ImagesBasic/me.jpg')
+#imgElon = cv2.cvtColor(imgElon,cv2.COLOR_BGR2RGB)
+#imgTest = face_recognition.load_image_file('ImagesBasic/Bill Gates.jpg')
+#imgTest = cv2.cvtColor(imgTest,cv2.COLOR_BGR2RGB)
+
+#Now to add new face we re direct it ti attandance folder and get no. pic in it
+
+
+#part 6 
+tells its me with a box!
+import cv2
+import cv2.cv2
+import numpy as np
+import face_recognition
+import os
+
+path = 'ImageAttandance'
+images = []
+classNames = []
+myList = os.listdir(path)
+print(myList)
+for cls in myList:
+    curImage = cv2.imread(f'{path}/{cls}')
+    images.append(curImage)
+    classNames.append(os.path.splitext(cls)[0])
+print(classNames)
+
+#create fn to find encoding
+def findEncodings(images):
+    encodeList = []
+    for img in images:
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+        encode = face_recognition.face_encodings(img)[0]
+        encodeList.append(encode)
+    return encodeList
+
+encodeListKnown = findEncodings(images)
+print('Encoding Complete')
+
+cap = cv2.VideoCapture(0)
+while True:
+    success,img = cap.read()
+    #images to be kept small ,fast process
+    imgs = cv2.resize(img,(0,0),None,0.25,0.25)
+    imgs = cv2.cvtColor(imgs,cv2.COLOR_BGR2RGB)
+
+
+    facesCurFrame = face_recognition.face_locations(imgs)
+    encodeCurFrame = face_recognition.face_encodings(imgs,facesCurFrame)
+
+    #comapre face wrt encode
+
+    for encodeFace,faceLoc in zip(encodeCurFrame,facesCurFrame):
+        matches = face_recognition.compare_faces(encodeListKnown,encodeFace)
+        faceDis = face_recognition.face_distance(encodeListKnown,encodeFace)
+        print(faceDis)
+        matchIndex = np.argmin(faceDis)
+
+        if matches[matchIndex]:
+            name = classNames[matchIndex].upper()
+            print(name)
+            y1,x2,y2,x1 = faceLoc
+            y1,x2,y2,x1 = y1*4,x2*4,y2*4,x1*4
+            cv2.rectangle(img,(x1,y1),(x2,y2),(0,255,0),2)
+            cv2.rectangle(img,(x1,y2-35),(x2,y2),(0,255,0),cv2.FILLED)
+            cv2.putText(img,name,(x1+6,y2-6),cv2.FONT_HERSHEY_COMPLEX,1,(255,255,255),2)
+
+
+    cv2.imshow('Webcam',img)
+    cv2.waitKey(1)
+
+
+
+
+#part 7 
+using pic to show info  but db to be connected csv has been created
+import cv2
+import cv2.cv2
+import numpy as np
+import face_recognition
+import os
+from datetime import datetime
+#datetime can be changed
+
+path = 'ImageInfo'
+images = []
+classNames = []
+myList = os.listdir(path)
+print(myList)
+for cls in myList:
+    curImage = cv2.imread(f'{path}/{cls}')
+    images.append(curImage)
+    classNames.append(os.path.splitext(cls)[0])
+print(classNames)
+
+#create fn to find encoding
+def findEncodings(images):
+    encodeList = []
+    for img in images:
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+        encode = face_recognition.face_encodings(img)[0]
+        encodeList.append(encode)
+    return encodeList
+
+#DISPLAY INFORMATION AND TIME AT WHICH THIS PERSON SHOWED UP ,UNLIKE OUR GROUP MEMEBERS
+#LINK TO A DATABASE IN THIS disInfo
+def disInfo(name):
+    with open('Information.csv','r+')as f:
+        #read data but dont repeat it
+        myDataList = f.readlines()
+        print(myDataList)
+disInfo('a')
+
+encodeListKnown = findEncodings(images)
+print('Encoding Complete')
+
+cap = cv2.VideoCapture(0)
+while True:
+    success,img = cap.read()
+    #images to be kept small ,fast process
+    imgs = cv2.resize(img,(0,0),None,0.25,0.25)
+    imgs = cv2.cvtColor(imgs,cv2.COLOR_BGR2RGB)
+
+
+    facesCurFrame = face_recognition.face_locations(imgs)
+    encodeCurFrame = face_recognition.face_encodings(imgs,facesCurFrame)
+
+    #comapre face wrt encode
+
+    for encodeFace,faceLoc in zip(encodeCurFrame,facesCurFrame):
+        matches = face_recognition.compare_faces(encodeListKnown,encodeFace)
+        faceDis = face_recognition.face_distance(encodeListKnown,encodeFace)
+        #print(faceDis)
+        matchIndex = np.argmin(faceDis)
+
+        if matches[matchIndex]:
+            name = classNames[matchIndex].upper()
+            #print(name)
+            y1,x2,y2,x1 = faceLoc
+            y1,x2,y2,x1 = y1*4,x2*4,y2*4,x1*4
+            cv2.rectangle(img,(x1,y1),(x2,y2),(0,255,0),2)
+            cv2.rectangle(img,(x1,y2-35),(x2,y2),(0,255,0),cv2.FILLED)
+            cv2.putText(img,name,(x1+6,y2-6),cv2.FONT_HERSHEY_COMPLEX,1,(255,255,255),2)
+
+
+    cv2.imshow('Webcam',img)
+    cv2.waitKey(1)
+
+
+#part 8 
+now we mark attandance for elon 
+import cv2
+import cv2.cv2
+import numpy as np
+import face_recognition
+import os
+from datetime import datetime
+#datetime can be changed
+
+path = 'ImageInfo'
+images = []
+classNames = []
+myList = os.listdir(path)
+print(myList)
+for cls in myList:
+    curImage = cv2.imread(f'{path}/{cls}')
+    images.append(curImage)
+    classNames.append(os.path.splitext(cls)[0])
+print(classNames)
+
+#create fn to find encoding
+def findEncodings(images):
+    encodeList = []
+    for img in images:
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+        encode = face_recognition.face_encodings(img)[0]
+        encodeList.append(encode)
+    return encodeList
+
+#DISPLAY INFORMATION AND TIME AT WHICH THIS PERSON SHOWED UP ,UNLIKE OUR GROUP MEMEBERS
+#LINK TO A DATABASE IN THIS disInfo
+def disInfo(name):
+    with open('Information.csv','r+')as f:
+        #read data but dont repeat it
+        myDataList = f.readlines()
+        nameList = []
+        for line in myDataList:
+            entry = line.split(',')
+            nameList.append(entry[0])
+        if name not in nameList:
+            now = datetime.now()
+            dtString = now.strftime('%H:%M:%S')
+            f.writelines(f'\n{name},{dtString}')
+
+        #print(myDataList)
+disInfo('Elon')
+
+encodeListKnown = findEncodings(images)
+print('Encoding Complete')
+
+cap = cv2.VideoCapture(0)
+while True:
+    success,img = cap.read()
+    #images to be kept small ,fast process
+    imgs = cv2.resize(img,(0,0),None,0.25,0.25)
+    imgs = cv2.cvtColor(imgs,cv2.COLOR_BGR2RGB)
+
+
+    facesCurFrame = face_recognition.face_locations(imgs)
+    encodeCurFrame = face_recognition.face_encodings(imgs,facesCurFrame)
+
+    #comapre face wrt encode
+
+    for encodeFace,faceLoc in zip(encodeCurFrame,facesCurFrame):
+        matches = face_recognition.compare_faces(encodeListKnown,encodeFace)
+        faceDis = face_recognition.face_distance(encodeListKnown,encodeFace)
+        #print(faceDis)
+        matchIndex = np.argmin(faceDis)
+
+        if matches[matchIndex]:
+            name = classNames[matchIndex].upper()
+            #print(name)
+            y1,x2,y2,x1 = faceLoc
+            y1,x2,y2,x1 = y1*4,x2*4,y2*4,x1*4
+            cv2.rectangle(img,(x1,y1),(x2,y2),(0,255,0),2)
+            cv2.rectangle(img,(x1,y2-35),(x2,y2),(0,255,0),cv2.FILLED)
+            cv2.putText(img,name,(x1+6,y2-6),cv2.FONT_HERSHEY_COMPLEX,1,(255,255,255),2)
+
+
+    cv2.imshow('Webcam',img)
+    cv2.waitKey(1)
+
+
+op
+Name,Time
+
+Elon,13:37:43
+
+#part 9 
+its marking me and elon'pre-fed'
+import cv2
+import cv2.cv2
+import numpy as np
+import face_recognition
+import os
+from datetime import datetime
+#datetime can be changed
+
+path = 'ImageInfo'
+images = []
+classNames = []
+myList = os.listdir(path)
+print(myList)
+for cls in myList:
+    curImage = cv2.imread(f'{path}/{cls}')
+    images.append(curImage)
+    classNames.append(os.path.splitext(cls)[0])
+print(classNames)
+
+#create fn to find encoding
+def findEncodings(images):
+    encodeList = []
+    for img in images:
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+        encode = face_recognition.face_encodings(img)[0]
+        encodeList.append(encode)
+    return encodeList
+
+#DISPLAY INFORMATION AND TIME AT WHICH THIS PERSON SHOWED UP ,UNLIKE OUR GROUP MEMEBERS
+#LINK TO A DATABASE IN THIS disInfo
+def disInfo(name):
+    with open('Information.csv','r+')as f:
+        #read data but dont repeat it
+        myDataList = f.readlines()
+        nameList = []
+        for line in myDataList:
+            entry = line.split(',')
+            nameList.append(entry[0])
+        if name not in nameList:
+            now = datetime.now()
+            dtString = now.strftime('%H:%M:%S')
+            f.writelines(f'\n{name},{dtString}')
+
+        #print(myDataList)
+disInfo('Elon')
+
+encodeListKnown = findEncodings(images)
+print('Encoding Complete')
+
+cap = cv2.VideoCapture(0)
+while True:
+    success,img = cap.read()
+    #images to be kept small ,fast process
+    imgs = cv2.resize(img,(0,0),None,0.25,0.25)
+    imgs = cv2.cvtColor(imgs,cv2.COLOR_BGR2RGB)
+
+
+    facesCurFrame = face_recognition.face_locations(imgs)
+    encodeCurFrame = face_recognition.face_encodings(imgs,facesCurFrame)
+
+    #comapre face wrt encode
+
+    for encodeFace,faceLoc in zip(encodeCurFrame,facesCurFrame):
+        matches = face_recognition.compare_faces(encodeListKnown,encodeFace)
+        faceDis = face_recognition.face_distance(encodeListKnown,encodeFace)
+        #print(faceDis)
+        matchIndex = np.argmin(faceDis)
+
+        if matches[matchIndex]:
+            name = classNames[matchIndex].upper()
+            #print(name)
+            y1,x2,y2,x1 = faceLoc
+            y1,x2,y2,x1 = y1*4,x2*4,y2*4,x1*4
+            cv2.rectangle(img,(x1,y1),(x2,y2),(0,255,0),2)
+            cv2.rectangle(img,(x1,y2-35),(x2,y2),(0,255,0),cv2.FILLED)
+            cv2.putText(img,name,(x1+6,y2-6),cv2.FONT_HERSHEY_COMPLEX,1,(255,255,255),2)
+            disInfo(name)
+
+
+    cv2.imshow('Webcam',img)
+    cv2.waitKey(1)
+
+
+op :
+Name,Time
+
+Elon,13:37:43
+a,13:40:13
+ME,13:44:30
+
+
+
+
+
+
