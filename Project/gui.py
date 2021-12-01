@@ -1,7 +1,7 @@
 import mysql.connector as myc
 from tkinter import *
 import dbConnection as dbc
-import Information as inf
+import main as mn
 
 
 root = Tk()
