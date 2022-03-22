@@ -5,6 +5,7 @@ import numpy as np
 import face_recognition
 import os
 from datetime import datetime
+import os
 
 # THE BELOW MODULE CONTAINS THE CODE FOR CONNECTING THE FACE RECOGNITION IDs TO DATABASE
 # MAKE SURE Information.py AND dbConnection.py ARE IN THE SAME DIRECTORIES / FOLDERS
@@ -22,11 +23,38 @@ import mysql.connector as myc
 # IF WANT TO MODIFY THE DATABASE NAME CHANGE IT HERE AS WELL AS IN THE SQL FILE
 database_name = "STUDENT_PORTFOLIO_DATABASE"
 
+db_params = []
+path = r'E:\face reco\student-portfolio-using-face-recognition-2\Project\dbDetails'
+
+
+try : 
+
+    with open(path) as dbfile :
+        for line in dbfile.readlines() :
+            db_params.append(line.rstrip().split(' = ')[1])
+
+    #print(db_params)
+
+    USER = db_params[0]
+    PASSWD = db_params[1]
+    DB = db_params[2]
+    TABLE = db_params[3]
+
+except FileNotFoundError :
+
+
+    print('The file which contains Database Details does not exist. Please manually hardcode the Database Details.')
+
+
+    raise FileNotFoundError
+
+
+
 
 class FaceRecognition:
-    def __init__(self, path):
+    def __init__(self, path =  r"Project/ImageInfo"):
 
-        self.path = r"Project/ImageInfo"
+        self.path = path
         self.images = []
         self.classNames = []
 
@@ -63,9 +91,9 @@ class FaceRecognition:
 
         student_db_connection = myc.connect(
             host=lhost,
-            user=luser,
-            passwd=lpasswd,
-            database=database_name,
+            user=USER,
+            passwd=PASSWD,
+            database=DB,
             auth_plugin="mysql_native_password",
         )
         student_cursor = student_db_connection.cursor()

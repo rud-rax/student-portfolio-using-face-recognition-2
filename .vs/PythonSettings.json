@@ -1,3 +1,5 @@
 {
-  "Interpreter": "E:\\SAP 5\\student-portfolio-using-face-recognition-2\\Project\\SAPEnv\\Scripts\\python.exe"
+  "TestFramework": "Pytest",
+  "SuppressConfigureTestFrameworkPrompt": "true",
+  "Interpreter": "Global|VisualStudio|frPi (Python 3.9 (64-bit))"
 }

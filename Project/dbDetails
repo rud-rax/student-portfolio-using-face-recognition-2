@@ -1,0 +1,4 @@
+user = root
+passwd = rudu101519
+db = student_portfolio_database
+table = student_details

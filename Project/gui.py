@@ -10,6 +10,33 @@ root.geometry("900x600")
 
 database_name = "STUDENT_PORTFOLIO_DATABASE"
 
+db_params = []
+path = r'E:\face reco\student-portfolio-using-face-recognition-2\Project\dbDetails'
+
+
+
+try : 
+
+    with open(path) as dbfile :
+        for line in dbfile.readlines() :
+            db_params.append(line.rstrip().split(' = ')[1])
+
+    #print(db_params)
+
+    USER = db_params[0]
+    PASSWD = db_params[1]
+    DB = db_params[2]
+    TABLE = db_params[3]
+
+except FileNotFoundError :
+
+
+    print('The file which contains Database Details does not exist. Please manually hardcode the Database Details.')
+
+
+    raise FileNotFoundError
+
+
 
 # def deluser() :
 
@@ -48,15 +75,14 @@ def getuser():
     e6.delete(0, END)
     e7.delete(0, END)
     e8.delete(0, END)
-
+    
     lhost = "localhost"
-    luser = "root"
-    lpasswd = ""
+
 
     # database name can be changed below the import statements
 
     student_db_connection = myc.connect(
-        host=lhost, user=luser, passwd=lpasswd, database=database_name
+        host=lhost, user=luser, passwd=PASSWD ,database=DB
     )
     student_cursor = student_db_connection.cursor()
 

@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Project"
+    "\\Project",
+    "\\Project\\LogData"
   ],
-  "SelectedNode": "\\Project\\dbConnection.py",
+  "SelectedNode": "\\Project\\attendanceUsingFaceRecognition.py",
   "PreviewInSolutionExplorer": false
 }
